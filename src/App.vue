@@ -13,6 +13,10 @@
             </div>
           </div>
         </div>
+        <div class="card-footer">
+          <button class="btn btn-default">Skip</button>
+          <button class="btn btn-success">Next</button>
+        </div>
       </div>
     </div>
   </div>
