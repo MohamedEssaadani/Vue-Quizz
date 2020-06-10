@@ -1,19 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="card border-primary mb-3" style="width: 60rem;">
+        <div class="card-header">Quizz App</div>
+        <div class="card-body">
+          <h4 class="card-title">Question</h4>
+          <div class="card-text">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action">First Suggestion</a>
+              <a href="#" class="list-group-item list-group-item-action">Second Suggestion</a>
+              <a href="#" class="list-group-item list-group-item-action">Third Suggestion</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App"
+};
 </script>
 
 <style>
