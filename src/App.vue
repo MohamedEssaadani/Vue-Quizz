@@ -3,13 +3,16 @@
     <div class="d-flex justify-content-center align-items-center">
       <div class="card border-primary mb-3" style="width: 60rem;">
         <div class="card-header">Quizz App</div>
-        <div class="card-body">
-          <h4 class="card-title">Question</h4>
+        <div class="card-body" v-for="question in questions" :key="question.id">
+          <h4 class="card-title">{{question.question}}</h4>
           <div class="card-text">
             <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-action">First Suggestion</a>
-              <a href="#" class="list-group-item list-group-item-action">Second Suggestion</a>
-              <a href="#" class="list-group-item list-group-item-action">Third Suggestion</a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action"
+                v-for="suggestion in question.suggestions"
+                :key="suggestion"
+              >{{suggestion}}</a>
             </div>
           </div>
         </div>
@@ -24,7 +27,19 @@
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  data() {
+    return {
+      questions: [
+        {
+          id: 1,
+          question: "Vue Js is for back end?",
+          suggestions: ["true", "false"],
+          answer: "False"
+        }
+      ]
+    };
+  }
 };
 </script>
 
